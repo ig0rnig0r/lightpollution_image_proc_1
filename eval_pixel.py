@@ -18,14 +18,14 @@ def brightness_rmsPixel( im_file ):
 
 ################################################
 # Reference
-reference_image_file = sys_path+"/old_orig.JPG"
+reference_image_file = sys_path+"/source_images/old_orig.JPG"
 #reference_image_file = sys_path+"/old_orig_save.jpg"
 reference_rms_pixel_brightness = brightness_rmsPixel(reference_image_file)
 print("Reference image brightness via rms pixels is " +str(reference_rms_pixel_brightness))
 
 ################################################
 # No Streetlights
-noStreetL_image_file = sys_path+"/old_noStreetLight1.jpg"
+noStreetL_image_file = sys_path+"/source_images/old_noStreetLight1.jpg"
 noStreetL_rms_pixel_brightness = brightness_rmsPixel(noStreetL_image_file)
 print("No Streetlights: Image brightness via rms pixels is " +str(noStreetL_rms_pixel_brightness))
 
@@ -44,7 +44,7 @@ image_list[0].save(sys_path+"/ref_vs_noStreetlights.gif",save_all=True, append_i
 
 ################################################
 # No Advertisments
-noAds_image_file = sys_path+"/old_noAtrioTrials.jpg"
+noAds_image_file = sys_path+"/source_images/old_noAtrioTrials.jpg"
 noAds_rms_pixel_brightness = brightness_rmsPixel(noAds_image_file)
 print("No Advertisments: Image brightness via rms pixels is " +str(noAds_rms_pixel_brightness))
 
@@ -62,7 +62,7 @@ image_list[0].save(sys_path+"/ref_vs_noAds.gif",save_all=True, append_images=ima
 
 ################################################
 # No Industry / Privates
-noInd_image_file = sys_path+"/old_noIFX.jpg"
+noInd_image_file = sys_path+"/source_images/old_noIFX.jpg"
 noInd_rms_pixel_brightness = brightness_rmsPixel(noInd_image_file)
 print("No Industry/Privates: Image brightness via rms pixels is " +str(noInd_rms_pixel_brightness))
 
