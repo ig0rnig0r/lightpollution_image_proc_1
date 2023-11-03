@@ -36,11 +36,11 @@ print("No Streetlights image has " +str(np.round(100-noStreetL_brightness_relToR
 img_ref = Image.open(reference_image_file)
 img_compare = Image.open(noStreetL_image_file)
 diff = ImageChops.difference(img_ref, img_compare)
-diff.save(sys_path+"/delta_noStreetlights.jpg","JPEG")
+diff.save(sys_path+"/result_images/delta_noStreetlights.jpg","JPEG")
 
 # Create a gif to check picture in daylight vs night (to identify objects)
 image_list = [img_ref,img_compare]
-image_list[0].save(sys_path+"/ref_vs_noStreetlights.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
+image_list[0].save(sys_path+"/result_images/ref_vs_noStreetlights.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
 
 ################################################
 # No Advertisments
@@ -54,11 +54,11 @@ print("No Advertisments image has " +str(np.round(100-noAds_brightness_relToRef_
 # Find the difference between the two images
 img_compare = Image.open(noAds_image_file)
 diff = ImageChops.difference(img_ref, img_compare)
-diff.save(sys_path+"/delta_noAds.jpg","JPEG")
+diff.save(sys_path+"/result_images/delta_noAds.jpg","JPEG")
 
 # Create a gif to check picture in daylight vs night (to identify objects)
 image_list = [img_ref,img_compare]
-image_list[0].save(sys_path+"/ref_vs_noAds.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
+image_list[0].save(sys_path+"/result_images/ref_vs_noAds.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
 
 ################################################
 # No Industry / Privates
@@ -72,11 +72,11 @@ print("No Industry/Privates image has " +str(np.round(100-noInd_brightness_relTo
 # Find the difference between the two images
 img_compare = Image.open(noInd_image_file)
 diff = ImageChops.difference(img_ref, img_compare)
-diff.save(sys_path+"/delta_noInd.jpg","JPEG")
+diff.save(sys_path+"/result_images/delta_noInd.jpg","JPEG")
 
 # Create a gif to check picture in daylight vs night (to identify objects)
 image_list = [img_ref,img_compare]
-image_list[0].save(sys_path+"/ref_vs_noInd.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
+image_list[0].save(sys_path+"/result_images/ref_vs_noInd.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
 
 ################################################
 # Comparison: Who has more impact? (quantitative evaluation)
