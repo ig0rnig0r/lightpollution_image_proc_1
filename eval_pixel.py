@@ -17,15 +17,27 @@ def brightness_rmsPixel( im_file ):
    return stat.rms[0]
 
 ################################################
-# Reference
-reference_image_file = sys_path+"/source_images/old_orig.JPG"
-#reference_image_file = sys_path+"/old_orig_save.jpg"
+# Reference (original quality imag)
+reference_orig_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_orig.jpg"
+reference_orig_rms_pixel_brightness = brightness_rmsPixel(reference_orig_image_file)
+print("Reference original image brightness via rms pixels is " +str(reference_orig_rms_pixel_brightness))
+
+################################################
+# Reference export (to compare with other exports, should be the real reference)
+reference_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_reference_export.jpg"
 reference_rms_pixel_brightness = brightness_rmsPixel(reference_image_file)
-print("Reference image brightness via rms pixels is " +str(reference_rms_pixel_brightness))
+print("Reference exported image brightness via rms pixels is " +str(reference_rms_pixel_brightness))
+
+# Find the difference between the two images
+img_orig_ref = Image.open(reference_orig_image_file)
+img_ref = Image.open(reference_image_file)
+diff = ImageChops.difference(img_ref, img_orig_ref)
+diff.save(sys_path+"/result_images/delta_orig_vs_export_reference.jpg","JPEG")
 
 ################################################
 # No Streetlights
-noStreetL_image_file = sys_path+"/source_images/old_noStreetLight1.jpg"
+# brush_width: 6px (GIMP 2.10)
+noStreetL_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noStreetlights_northWest_1.jpg"
 noStreetL_rms_pixel_brightness = brightness_rmsPixel(noStreetL_image_file)
 print("No Streetlights: Image brightness via rms pixels is " +str(noStreetL_rms_pixel_brightness))
 
