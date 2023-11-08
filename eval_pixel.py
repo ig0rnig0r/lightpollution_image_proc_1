@@ -39,7 +39,9 @@ diff_inv.save(sys_path+"/result_images/delta_orig_vs_export_reference_inverted.j
 ################################################
 # No Streetlights
 # brush_width: 6px (GIMP 2.10)
-noStreetL_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noStreetlights_northWest_1.jpg"
+#noStreetL_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noStreetlights_northWest_1.jpg"
+#noStreetL_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noStreetlights_north_1.jpg"
+noStreetL_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noStreetlights_full_1.jpg"
 noStreetL_rms_pixel_brightness = brightness_rmsPixel(noStreetL_image_file)
 print("No Streetlights: Image brightness via rms pixels is " +str(noStreetL_rms_pixel_brightness))
 
@@ -58,23 +60,25 @@ diff_inv.save(sys_path+"/result_images/delta_noStreetlights_inverted.jpg","JPEG"
 # image_list = [img_ref,img_compare]
 # image_list[0].save(sys_path+"/result_images/ref_vs_noStreetlights.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
 
-# ################################################
-# # No Advertisments
-# noAds_image_file = sys_path+"/source_images/old_noAtrioTrials.jpg"
-# noAds_rms_pixel_brightness = brightness_rmsPixel(noAds_image_file)
-# print("No Advertisments: Image brightness via rms pixels is " +str(noAds_rms_pixel_brightness))
+################################################
+# No Advertisments
+noAds_image_file = sys_path+"/source_images/202310262130_DoP2_lowISO_noAds_full_1.jpg"
+noAds_rms_pixel_brightness = brightness_rmsPixel(noAds_image_file)
+print("No Advertisments: Image brightness via rms pixels is " +str(noAds_rms_pixel_brightness))
 
-# noAds_brightness_relToRef_perc = noAds_rms_pixel_brightness * 100 / reference_rms_pixel_brightness # how much less brightness ([%])
-# print("No Advertisments image has " +str(np.round(100-noAds_brightness_relToRef_perc,2)) +"% less brightness")
+noAds_brightness_relToRef_perc = noAds_rms_pixel_brightness * 100 / reference_rms_pixel_brightness # how much less brightness ([%])
+print("No Advertisments image has " +str(np.round(100-noAds_brightness_relToRef_perc,2)) +"% less brightness")
 
-# # Find the difference between the two images
-# img_compare = Image.open(noAds_image_file)
-# diff = ImageChops.difference(img_ref, img_compare)
-# diff.save(sys_path+"/result_images/delta_noAds.jpg","JPEG")
+# Find the difference between the two images
+img_compare = Image.open(noAds_image_file)
+diff = ImageChops.difference(img_ref, img_compare)
+diff.save(sys_path+"/result_images/delta_noAds.jpg","JPEG")
+diff_inv = ImageOps.invert(diff)
+diff_inv.save(sys_path+"/result_images/delta_noAds_inverted.jpg","JPEG")
 
-# # Create a gif to check picture in daylight vs night (to identify objects)
-# image_list = [img_ref,img_compare]
-# image_list[0].save(sys_path+"/result_images/ref_vs_noAds.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
+# Create a gif to check picture in daylight vs night (to identify objects)
+image_list = [img_ref,img_compare]
+image_list[0].save(sys_path+"/result_images/ref_vs_noAds.gif",save_all=True, append_images=image_list[1:],duration=200,loop=1) # ATTENTION: in IrfanView the upper right corner doesn't show animation!?
 
 # ################################################
 # # No Industry / Privates
@@ -89,6 +93,8 @@ diff_inv.save(sys_path+"/result_images/delta_noStreetlights_inverted.jpg","JPEG"
 # img_compare = Image.open(noInd_image_file)
 # diff = ImageChops.difference(img_ref, img_compare)
 # diff.save(sys_path+"/result_images/delta_noInd.jpg","JPEG")
+# diff_inv = ImageOps.invert(diff)
+# diff_inv.save(sys_path+"/result_images/delta_noInd_inverted.jpg","JPEG")
 
 # # Create a gif to check picture in daylight vs night (to identify objects)
 # image_list = [img_ref,img_compare]
