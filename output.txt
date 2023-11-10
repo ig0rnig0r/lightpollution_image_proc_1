@@ -1,0 +1,9 @@
+Reference original image brightness via rms pixels is 8.744057213853504
+Reference exported image brightness via rms pixels is 8.746422737774113
+In this image 33 pixels are fully saturated (0.0001354154817812011%)
+No Streetlights: Image brightness via rms pixels is 8.291245270538774
+No Streetlights image has 5.2% less brightness
+No Advertisments: Image brightness via rms pixels is 8.426156323267161
+No Advertisments image has 3.66% less brightness
+No Industry/Trainstation: Image brightness via rms pixels is 8.460365118226918
+No Industry/Trainstation image has 3.27% less brightness
