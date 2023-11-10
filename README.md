@@ -11,4 +11,4 @@ It should demonstrate how much "influence" each type of light source has relativ
 
 Additionally the reference is crosschecked at the beginning, and also the number of fully saturated pixels are given (used to discuss if some super-bright light sources in reality are even brighter but the sensor clipped). 
 
-The script output is written to "output.txt" to show the relative measurement results.
+The script output is written to "output.txt" to show the relative measurement results...
