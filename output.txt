@@ -1,9 +1,16 @@
-Reference original image brightness via rms pixels is 8.744057213853504
-Reference exported image brightness via rms pixels is 8.746422737774113
-In this image 33 pixels are fully saturated (0.0001354154817812011%)
-No Streetlights: Image brightness via rms pixels is 8.291245270538774
-No Streetlights image has 5.2% less brightness
-No Advertisments: Image brightness via rms pixels is 8.426156323267161
-No Advertisments image has 3.66% less brightness
-No Industry/Trainstation: Image brightness via rms pixels is 8.460365118226918
-No Industry/Trainstation image has 3.27% less brightness
+Reference original image brightness via rms pixels is 12.440976577686715
+In this image 1200 pixels are 90% of maximum brightness (0.003329657299184553%)
+In this image 3 pixels are fully saturated (8.324143247961382e-06%)
+0.25% of bright pixels are saturated
+Reference exported image brightness via rms pixels is 12.440976577686715
+In this image 1200 pixels are 90% of maximum brightness (0.003329657299184553%)
+In this image 3 pixels are fully saturated (8.324143247961382e-06%)
+0.25% of bright pixels are saturated
+No Streetlights: Image brightness via rms pixels is 12.06972936995349
+No Streetlights image has 2.98% less brightness
+No Advertisments: Image brightness via rms pixels is 12.19928786035981
+No Advertisments image has 1.94% less brightness
+No Industry/Trainstation: Image brightness via rms pixels is 12.341276317555181
+No Industry/Trainstation image has 0.8% less brightness
+Biggest reduction seen with NoStreetlights by 2.98%
+Smallest reduction seen with NoIndustryPrivates by 0.8%
