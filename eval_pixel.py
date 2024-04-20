@@ -10,8 +10,6 @@ sys_path = sys.path[0]
 os.system('clear')
 sys.stdout = open(sys_path+"/output.txt", 'w')
 
-## Maybe the goto function from
-# https://stackoverflow.com/questions/3490727/what-are-some-methods-to-analyze-image-brightness-using-python
 def brightness_rmsPixel(im):
    im = im.convert('L')
    stat = ImageStat.Stat(im) # RMS (root-mean-square) for each band in the image
